@@ -20,7 +20,7 @@ app.get('/posts/:id/comments', (req, res) => {
 });
 
 // Create post route
-app.post('/posts/:id/comments', (req, res) => {
+app.post('/posts/:id/comments', async (req, res) => {
   // Create id for comment
   const commentId = randomBytes(4).toString('hex');
   // Get content from request body
@@ -77,4 +77,4 @@ app.post('/events', async (req, res) => {
     });
   }
 
-  // Send
+});
